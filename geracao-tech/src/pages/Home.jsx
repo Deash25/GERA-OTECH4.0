@@ -5,7 +5,7 @@ import { MainContent, Card } from "../components";
 export default function Home() {
   return (
     <div className="home-page">
-      <section className="hero">
+             <section className="hero">
         <div className="hero-content">
           <span className="hero-tag">TECNOLOGIA • EDUCAÇÃO • FUTURO</span>
 

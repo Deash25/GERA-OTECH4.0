@@ -5,11 +5,11 @@ function Header() {
   const location = useLocation();
 
   const links = [
-    { to: "/", label: "Início" },
-    { to: "/about", label: "Sobre" },
-    { to: "/contact", label: "Contato" },
-    { to: "/user/1", label: "Perfil" },
-  ];
+  { to: "/", label: "Início" },
+  { to: "/about", label: "Sobre" },
+  { to: "/contact", label: "Contato" },
+  { to: "/user/1", label: "Perfil" },
+];
 
   return (
     <header className="site-header">
