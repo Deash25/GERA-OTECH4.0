@@ -8,6 +8,7 @@ function Header() {
   { to: "/", label: "Início" },
   { to: "/about", label: "Sobre" },
   { to: "/contact", label: "Contato" },
+  { to: "/store", label: "Loja" },
   { to: "/user/1", label: "Perfil" },
 ];
 

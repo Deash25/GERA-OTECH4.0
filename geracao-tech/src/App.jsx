@@ -14,6 +14,7 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const UserProfile = lazy(() => import("./pages/UserProfile"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Store = lazy(() => import("./pages/Store"));
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/user/:id" element={<UserProfile />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/store" element={<Store />} />
           </Route>
         </Routes>
       </Suspense>
