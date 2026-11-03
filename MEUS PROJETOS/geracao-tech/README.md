@@ -25,4 +25,4 @@ Aplicação web e-commerce desenvolvida em React para o projeto final do curso F
 
 1. Clone o repositório:
    ```bash
-   git clone [LINK_DO_TEU_REPOSITORIO]
+   git clone [https://github.com/Deash25/GERA-OTECH4.0.git](https://github.com/Deash25/GERA-OTECH4.0.git)
