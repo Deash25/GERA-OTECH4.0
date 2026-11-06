@@ -1,0 +1,92 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Digital Store API",
+    "description": "API RESTful para gestão de produtos da Digital Store",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Servidor Local"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "summary": "Lista todos os produtos",
+        "responses": {
+          "200": { "description": "Lista de produtos retornada com sucesso." }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo produto",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string", "example": "Tênis Nike Revolution" },
+                  "price": { "type": "number", "example": 299.9 },
+                  "description": { "type": "string", "example": "Tênis esportivo confortável" },
+                  "image": { "type": "string", "example": "https://example.com/foto.jpg" }
+                },
+                "required": ["title", "price"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Produto criado com sucesso." }
+        }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "summary": "Obtém um produto por ID",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "Produto encontrado." },
+          "404": { "description": "Produto não encontrado." }
+        }
+      },
+      "put": {
+        "summary": "Atualiza um produto por ID",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "price": { "type": "number" },
+                  "description": { "type": "string" },
+                  "image": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Produto atualizado com sucesso." }
+        }
+      },
+      "delete": {
+        "summary": "Elimina um produto por ID",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "Produto eliminado com sucesso." }
+        }
+      }
+    }
+  }
+}
